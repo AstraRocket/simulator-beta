@@ -1,8 +1,8 @@
 name: Deploy beta
 
-# Publishes the beta site, https://thzero.github.io/AstraRocketJs-beta/, from
-# the beta branch of thzero/AstraRocketJs. The build lives there, in
-# .github/workflows/beta-deploy.yml; this file is the "Run workflow" button.
+# Publishes the beta site, https://astrarocket.github.io/simulator-beta/, from
+# the beta branch of AstraRocket/simulator. The build lives there, in
+# .github/workflows/channel-deploy.yml; this file is the "Run workflow" button.
 
 on:
   workflow_dispatch:
@@ -14,4 +14,6 @@ permissions:
 
 jobs:
   deploy:
-    uses: AstraRocket/simulator/.github/workflows/beta-deploy.yml@beta
+    uses: AstraRocket/simulator/.github/workflows/channel-deploy.yml@beta
+    with:
+      channel: beta
